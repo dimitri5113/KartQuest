@@ -8,7 +8,7 @@ public class GameplayManager : MonoBehaviour
     public static GameplayManager instance;
 
     public bool questIsActive = false;
-    
+
     void Awake()
     {
 
@@ -20,17 +20,34 @@ public class GameplayManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
-    
+
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void AddPieces()
     {
-        numbersOfPieces ++;
+        numbersOfPieces++;
+    }
+
+    public bool canGivePiece(int i)
+    {
+        if (numbersOfPieces - i < 0)
+        {
+            return false;
+        }
+        return true;
+    }
+
+    public void GivePiece(int i)
+    {
+        if (canGivePiece(i))
+        {
+            numbersOfPieces -= i;
+        }
     }
 
 

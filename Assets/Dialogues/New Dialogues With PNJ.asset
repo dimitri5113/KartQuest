@@ -19,3 +19,5 @@ MonoBehaviour:
     text: Bonjour
   - name: PNJ
     text: 'Donne moi 5 pieces '
+  - name: PNJ
+    text: MERCI !

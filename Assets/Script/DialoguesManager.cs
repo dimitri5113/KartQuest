@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UIElements;
 
 public class DialoguesManager : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class DialoguesManager : MonoBehaviour
     }
     public void SetDialogueUI()
     {
+        if(pnjName.actualDialogue >= pnjName.dialoguesWithPNJ.Dialogues.Length) {
+            return;
+        }
         nameOfSpeaker.text = pnjName.dialoguesWithPNJ.Dialogues[pnjName.actualDialogue].name;
         dialogueOfSpeaker.text = pnjName.dialoguesWithPNJ.Dialogues[pnjName.actualDialogue].text;
     }
