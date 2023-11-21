@@ -27,7 +27,7 @@ public class GamePlayer : MonoBehaviour
         
         if (other.tag == "PNJ")
         {
-            Debug.Log(other);
+            other.GetComponent<PnjController>().StartConversation();
         }
 
         if (other.tag == "Portail")

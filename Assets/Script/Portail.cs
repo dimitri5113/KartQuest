@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Portail : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private string LevelName;
     void Start()
     {
         
@@ -19,6 +19,6 @@ public class Portail : MonoBehaviour
 
     public void ChangeLevel(){
         Debug.Log("ChngeLevel");
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene(LevelName);
     }
 }

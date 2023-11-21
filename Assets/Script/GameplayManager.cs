@@ -5,10 +5,20 @@ using UnityEngine;
 public class GameplayManager : MonoBehaviour
 {
     public int numbersOfPieces = 0;
+    public static GameplayManager instance;
+
+    public bool questIsActive = false;
     
     void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+
+        if (instance != null)
+            Destroy(gameObject);
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
     
 
