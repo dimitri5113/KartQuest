@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class GamePlayer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+public GameObject interfaceManager; 
+void Start()
     {
         
     }
@@ -22,6 +22,7 @@ public class GamePlayer : MonoBehaviour
         if (other.tag == "Collectable")
         {
             other.GetComponent<Collectable>().IsCollected();
+            interfaceManager.GetComponent<InterfaceManager>().UpdatePiecesInterface();
             Debug.Log(other);
         }
         
@@ -35,5 +36,12 @@ public class GamePlayer : MonoBehaviour
             other.GetComponent<Portail>().ChangeLevel();
         }
         
+    }
+    private void OnTriggerExit(Collider other)
+    {
+         if (other.tag == "PNJ")
+        {
+            other.GetComponent<PnjController>().ClosedDialogue();
+        }
     }
 }

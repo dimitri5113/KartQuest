@@ -10,11 +10,16 @@ public class DialoguesManager : MonoBehaviour
     public GameObject canvas;
     public TMP_Text nameOfSpeaker;
     public TMP_Text dialogueOfSpeaker;
+
+    public GameObject textSuivantButton;
+    public GameObject queteButton;
+    public GameObject testQuitButton;
     
     public void StartDialogueUI(PnjController pnj)
     {
         pnjName = pnj;
         SetDialogueUI();
+        canvas.SetActive(true);
     }
     public void NextDialogueUI()
     {
@@ -31,5 +36,9 @@ public class DialoguesManager : MonoBehaviour
     public void ClosedDialogueUI()
     {
         canvas.SetActive(false);
+    }
+    public void NextDialogue()
+    {
+     
     }
 }

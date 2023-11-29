@@ -9,6 +9,9 @@ public class PnjController : MonoBehaviour
     public GameplayManager gameplayManager;
     public DialoguesManager dialoguesManager;
     public DialoguesWithPNJ dialoguesWithPNJ;
+    public InterfaceManager interfaceManager;
+    public QuestOfPnj questOfPnj;
+
 
     public GameObject textSuivantButton;
     public GameObject queteButton;
@@ -50,18 +53,13 @@ public class PnjController : MonoBehaviour
         {
             gameplayManager.questIsActive = true;
             textSuivantButton.SetActive(false);
-            if (gameplayManager.canGivePiece(QuestNumberOfPieces))
-            {
-                queteButton.SetActive(true);
-                testQuitButton.SetActive(true);
-                queteButton.GetComponent<Button>().onClick.AddListener(delegate { FivePiece(QuestNumberOfPieces); });
-            }
+            testQuitButton.SetActive(true);
+            queteButton.SetActive(true);
             
         }
 
         if (actualDialogue == 3)
         {
-            //queteButton.SetActive(true);
 
         }
 
@@ -73,17 +71,24 @@ public class PnjController : MonoBehaviour
         dialoguesManager.SetDialogueUI();
     }
 
-    public void FivePiece(int i)
-    {
-        gameplayManager.GivePiece(i);
-        queteButton.SetActive(false);
-        textSuivantButton.SetActive(true);
-        actualDialogue++;
-        dialoguesManager.SetDialogueUI();
-    }
 
     public void ClosedDialogue()
     {
         dialoguesManager.ClosedDialogueUI();
+    }
+
+    public void CheckQuest()
+    {
+        if (gameplayManager.numbersOfPieces >= questOfPnj.nombresDePieces)
+        {
+            gameplayManager.GivePiece(questOfPnj.nombresDePieces);
+            gameplayManager.questIsActive = false;
+            actualDialogue = questOfPnj.dialogueToGoOnFinished;
+            dialoguesManager.SetDialogueUI();
+            interfaceManager.UpdatePiecesInterface();
+            textSuivantButton.SetActive(true);
+            queteButton.SetActive(false);
+
+        }
     }
 }
