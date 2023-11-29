@@ -33,6 +33,14 @@ public class PnjController : MonoBehaviour
         {
             actualDialogue = 0;
         }
+        if (actualDialogue == 2)
+        {
+            gameplayManager.questIsActive = true;
+            textSuivantButton.SetActive(false);
+            testQuitButton.SetActive(true);
+            queteButton.SetActive(true);
+            
+        }
     }
 
     // Update is called once per frame

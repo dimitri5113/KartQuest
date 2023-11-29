@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a11675296c46a643ad9018dc927b5a7, type: 3}
   m_Name: New Quest Of Pnj
   m_EditorClassIdentifier: 
-  nombresDePieces: 0
+  nombresDePieces: 5
   dialogueToGoOnFinished: 0

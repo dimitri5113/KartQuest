@@ -9418,6 +9418,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad674e5a7934182479fd19b6a271b1a3, type: 3}
+--- !u!1 &1201043298 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 766727186157955523, guid: 44065173a1e311d46b6d843021133fb8,
+    type: 3}
+  m_PrefabInstance: {fileID: 725320472487413011}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1201043299 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6851961963454185290, guid: 44065173a1e311d46b6d843021133fb8,
+    type: 3}
+  m_PrefabInstance: {fileID: 725320472487413011}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201043298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 673840baaf4410840bb8059852daeeba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1203352634
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12609,6 +12627,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6892191646590326581, guid: 19954de30401f73428254541a9ad156e,
+        type: 3}
+      propertyPath: interfaceManager
+      value: 
+      objectReference: {fileID: 1201043298}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18182,14 +18205,29 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 907858685497103259, guid: 9a030f7dd19750e4d9fb72148a8a1f6e,
         type: 3}
-      propertyPath: pnjName
+      propertyPath: queteButton
       value: 
-      objectReference: {fileID: 810056799}
+      objectReference: {fileID: 1935026731}
+    - target: {fileID: 907858685497103259, guid: 9a030f7dd19750e4d9fb72148a8a1f6e,
+        type: 3}
+      propertyPath: testQuitButton
+      value: 
+      objectReference: {fileID: 2112010293}
+    - target: {fileID: 907858685497103259, guid: 9a030f7dd19750e4d9fb72148a8a1f6e,
+        type: 3}
+      propertyPath: textSuivantButton
+      value: 
+      objectReference: {fileID: 1935026731}
     - target: {fileID: 1453039076976152740, guid: 9a030f7dd19750e4d9fb72148a8a1f6e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 810056799}
+    - target: {fileID: 1453039076976152740, guid: 9a030f7dd19750e4d9fb72148a8a1f6e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClosedDialogue
+      objectReference: {fileID: 0}
     - target: {fileID: 2551647486792611837, guid: 9a030f7dd19750e4d9fb72148a8a1f6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18240,11 +18278,56 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5716508096383479198, guid: 9a030f7dd19750e4d9fb72148a8a1f6e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716508096383479198, guid: 9a030f7dd19750e4d9fb72148a8a1f6e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716508096383479198, guid: 9a030f7dd19750e4d9fb72148a8a1f6e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 810056799}
+    - target: {fileID: 5716508096383479198, guid: 9a030f7dd19750e4d9fb72148a8a1f6e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716508096383479198, guid: 9a030f7dd19750e4d9fb72148a8a1f6e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CheckQuest
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716508096383479198, guid: 9a030f7dd19750e4d9fb72148a8a1f6e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PnjController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716508096383479198, guid: 9a030f7dd19750e4d9fb72148a8a1f6e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716508096383479198, guid: 9a030f7dd19750e4d9fb72148a8a1f6e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6703797394944682423, guid: 9a030f7dd19750e4d9fb72148a8a1f6e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 810056799}
+    - target: {fileID: 6703797394944682423, guid: 9a030f7dd19750e4d9fb72148a8a1f6e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextDialogue
+      objectReference: {fileID: 0}
     - target: {fileID: 6912217318674092656, guid: 9a030f7dd19750e4d9fb72148a8a1f6e,
         type: 3}
       propertyPath: m_Name
@@ -18530,6 +18613,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6502436931624069383, guid: e8d2c812f7ceffc49bbdf646a7532331,
         type: 3}
+      propertyPath: questOfPnj
+      value: 
+      objectReference: {fileID: 11400000, guid: 5db5b956d13f9654e88f6ff164f8e79f,
+        type: 2}
+    - target: {fileID: 6502436931624069383, guid: e8d2c812f7ceffc49bbdf646a7532331,
+        type: 3}
       propertyPath: queteButton
       value: 
       objectReference: {fileID: 943234078}
@@ -18554,6 +18643,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 1f5759d56af884a4da9970c2af2136ce,
         type: 2}
+    - target: {fileID: 6502436931624069383, guid: e8d2c812f7ceffc49bbdf646a7532331,
+        type: 3}
+      propertyPath: interfaceManager
+      value: 
+      objectReference: {fileID: 1201043299}
     - target: {fileID: 6502436931624069383, guid: e8d2c812f7ceffc49bbdf646a7532331,
         type: 3}
       propertyPath: textSuivantButton
